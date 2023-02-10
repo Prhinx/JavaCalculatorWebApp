@@ -2,27 +2,23 @@
 
 ubuntu-servers:
   hosts:
-    ub01:
-      ansible_host: 20.106.176.42
+    n1:
+      ansible_host: 172.31.0.210
       ansible_port: 22
-      ansible_user: azureuser
-      ansible_ssh_private_key_file: /home/azureuser/.ssh/key.pem
-      ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
-    ub02:
-      ansible_host: 20.106.176.74
-      ansible_ssh_private_key_file: /home/azureuser/.ssh/key.pem
-      ansible_user: azureuser
+      ansible_user: ubuntu
+      ansible_ssh_private_key_file: /home/ubuntu/.ssh/demokeyp22.pem
       ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
 
-centOS-servers:
-  hosts:
-    cent01:
-      ansible_host: 20.220.16.163
-      ansible_user: azureuser
-      ansible_ssh_private_key_file: /home/azureuser/.ssh/key.pem
+    n2:
+      ansible_host: 172.31.6.200
+      ansible_ssh_private_key_file: /home/ubuntu/.ssh/demokeyp22.pem
+      ansible_user: ubuntu
       ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
-    cent02:
-      ansible_host: 20.220.16.191
-      ansible_ssh_private_key_file: /home/azureuser/.ssh/key.pem
-      ansible_user: azureuser
+
+    n3:
+      ansible_host: 172.31.12.30
+      ansible_ssh_private_key_file: /home/ubuntu/.ssh/demokeyp22.pem
+      ansible_user: ubuntu
       ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+
+...
